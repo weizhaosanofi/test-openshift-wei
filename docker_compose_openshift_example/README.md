@@ -52,7 +52,7 @@ oc login
 
     
 ### kompose
-    
+~~~bash  
     apiVersion: apps.openshift.io/v1
     apiVersion: image.openshift.io/v1
     
@@ -61,34 +61,9 @@ oc login
     kubectl apply -f frontend-tcp-service.yaml,redis-master-service.yaml,redis-slave-service.yaml,frontend-deploymentconfig.yaml,redis-master-deploymentconfig.yaml,redis-slave-deploymentconfig.yaml,frontend-imagestream.yaml,redis-master-imagestream.yaml,redis-slave-imagestream.yaml
     kubectl delete -f frontend-tcp-service.yaml,redis-master-service.yaml,
     
-    
+    oc get pods
     https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/#docker-compose-versions
-    
-### Run  
-Clone the project  
-
-~~~bash  
-  git clone 
 ~~~
-
-Go to the project directory  
-
-~~~bash  
-  cd my-project
-~~~
-
-Build and run your app with Compose
-
-~~~bash  
-    docker compose up
-~~~
-
-Start the server  
-
-~~~bash  
-npm run start
-~~~  
-
 
 
 
