@@ -63,6 +63,9 @@ oc login
     kubectl delete -f frontend-tcp-service.yaml,redis-master-service.yaml,
     
     Add user: oc adm policy add-role-to-user admin I0476974
+    remove user: oc adm policy remove-role-from-user edit <collaborator>
+    admin/edit/view
+    
     oc get pods
     https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/#docker-compose-versions
 ~~~
