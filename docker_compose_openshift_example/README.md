@@ -53,14 +53,16 @@ oc login
     
 ### kompose
 ~~~bash  
-    apiVersion: apps.openshift.io/v1
-    apiVersion: image.openshift.io/v1
+    
+    replace Deployment config files V1 with: apiVersion: apps.openshift.io/v1
+    replace Image files V1 with: apiVersion: image.openshift.io/v1
     
     kompose --provider openshift --file docker-voting.yml convert
     
     kubectl apply -f frontend-tcp-service.yaml,redis-master-service.yaml,redis-slave-service.yaml,frontend-deploymentconfig.yaml,redis-master-deploymentconfig.yaml,redis-slave-deploymentconfig.yaml,frontend-imagestream.yaml,redis-master-imagestream.yaml,redis-slave-imagestream.yaml
     kubectl delete -f frontend-tcp-service.yaml,redis-master-service.yaml,
     
+    Add user: oc adm policy add-role-to-user admin I0476974
     oc get pods
     https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/#docker-compose-versions
 ~~~
