@@ -7,3 +7,4 @@
 2. [Some paragraph](#paragraph1)  
     1. [Sub paragraph](#subparagraph1)  
 3. [Another paragraph](#paragraph2)  
+4. flash with openshift example: https://github.com/edwin/containerized-hello-world-python
